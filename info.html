@@ -1,0 +1,253 @@
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --border-color: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --row-alt: #182234;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+    }
+    header {
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .table-container {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+    thead {
+      background-color: #0f172a;
+      border-bottom: 2px solid var(--border-color);
+    }
+    th {
+      padding: 1rem 1.25rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+    tbody tr {
+      border-bottom: 1px solid var(--border-color);
+      transition: background-color 0.15s ease-in-out;
+    }
+    tbody tr:nth-child(even) {
+      background-color: var(--row-alt);
+    }
+    tbody tr:hover {
+      background-color: rgba(56, 189, 248, 0.08);
+    }
+    td {
+      padding: 1.1rem 1.25rem;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .badge {
+      display: inline-block;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+    .subtext {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+    .airport-name {
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+    .time-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: #38bdf8;
+      font-size: 0.82rem;
+      margin-top: 0.2rem;
+    }
+  </style>
+  <div class="container">
+    <header>
+      <h1>Missile Silo Logistics and Nearby Airfields</h1>
+      <p class="subtitle">Ground travel times, reference cities and nearest airports (general and commercial aviation) in the U.S.</p>
+    </header>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Complex Type and State</th>
+            <th>Nearby Town / City</th>
+            <th>Major / Metropolitan City</th>
+            <th>Nearest Airport / Airstrip</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="badge">Atlas-E</span>
+              <div class="subtext">Washington State (Sprague / Reardan)</div>
+            </td>
+            <td>
+              <strong>Sprague, WA</strong> <span class="subtext">(~500 pop.)</span>
+              <div class="time-tag">⏱️ 7 – 10 min</div>
+            </td>
+            <td>
+              <strong>Spokane, WA</strong> <span class="subtext">(~230k pop.)</span>
+              <div class="time-tag">⏱️ 35 – 45 min</div>
+            </td>
+            <td>
+              <div class="airport-name">Sprague Municipal Airport (4W0)</div>
+              <div class="subtext">✈️ 8 – 12 km (~10 min)</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="badge">Atlas-F</span>
+              <div class="subtext">Kansas (Salina / Brookville)</div>
+            </td>
+            <td>
+              <strong>Brookville, KS</strong> <span class="subtext">(~250 pop.)</span>
+              <div class="time-tag">⏱️ 5 – 8 min</div>
+            </td>
+            <td>
+              <strong>Wichita, KS</strong> <span class="subtext">(~400k pop.)</span>
+              <div class="time-tag">⏱️ 1 h 15 min <span class="subtext">(Salina 15 min away)</span></div>
+            </td>
+            <td>
+              <div class="airport-name">Salina Regional Airport (SLN / KSLN)</div>
+              <div class="subtext">✈️ 20 – 25 km (~18 min)</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="badge">Atlas-F</span>
+              <div class="subtext">Upstate New York (Plattsburgh / Lewis / Adirondacks)</div>
+            </td>
+            <td>
+              <strong>Lewis, NY</strong> <span class="subtext">(~1,200 pop.)</span>
+              <div class="time-tag">⏱️ 8 – 12 min</div>
+            </td>
+            <td>
+              <strong>Montreal, CA</strong> / <strong>Burlington, VT</strong>
+              <div class="time-tag">⏱️ 1 h 15 min / 1 h</div>
+            </td>
+            <td>
+              <div class="airport-name">Plattsburgh International Airport (PBG / KPBG)</div>
+              <div class="subtext">✈️ 35 – 45 km (~30 min)</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="badge">Titan II</span>
+              <div class="subtext">Southern Arizona (Green Valley / Sahuarita)</div>
+            </td>
+            <td>
+              <strong>Sahuarita, AZ</strong> <span class="subtext">(~34,000 pop.)</span>
+              <div class="time-tag">⏱️ 5 – 10 min</div>
+            </td>
+            <td>
+              <strong>Tucson, AZ</strong> <span class="subtext">(~540k pop.)</span>
+              <div class="time-tag">⏱️ 25 – 30 min</div>
+            </td>
+            <td>
+              <div class="airport-name">Ruby Star Airpark (14AZ) / Ryan Field (RYN / KRYN)</div>
+              <div class="subtext">✈️ 15 – 25 km (~15–20 min)</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="badge">Atlas-F</span>
+              <div class="subtext">West Texas (Abilene / Winters / Lawn)</div>
+            </td>
+            <td>
+              <strong>Winters, TX</strong> <span class="subtext">(~2,300 pop.)</span>
+              <div class="time-tag">⏱️ 6 – 10 min</div>
+            </td>
+            <td>
+              <strong>Abilene, TX</strong> <span class="subtext">(~125k pop.)</span>
+              <div class="time-tag">⏱️ 40 – 50 min</div>
+            </td>
+            <td>
+              <div class="airport-name">Winters Municipal Airport (77F)</div>
+              <div class="subtext">✈️ 10 – 15 km (~12 min)</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="badge">Atlas-F</span>
+              <div class="subtext">New Mexico (Chaves County / Roswell)</div>
+            </td>
+            <td>
+              <strong>Dexter / Hagerman, NM</strong> <span class="subtext">(~1,200 pop.)</span>
+              <div class="time-tag">⏱️ 10 – 15 min</div>
+            </td>
+            <td>
+              <strong>Albuquerque, NM</strong> / <strong>El Paso, TX</strong>
+              <div class="time-tag">⏱️ 3 hours <span class="subtext">(Roswell 20 min away)</span></div>
+            </td>
+            <td>
+              <div class="airport-name">Roswell Air Center (ROW / KROW)</div>
+              <div class="subtext">✈️ 25 – 35 km (~20–25 min)</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="badge">Safeguard ABM</span>
+              <div class="subtext">North Dakota (Cavalier County / Nekoma)</div>
+            </td>
+            <td>
+              <strong>Nekoma / Langdon, ND</strong> <span class="subtext">(~200 – 1,800 pop.)</span>
+              <div class="time-tag">⏱️ 10 – 15 min</div>
+            </td>
+            <td>
+              <strong>Grand Forks, ND</strong> <span class="subtext">(~58k pop.)</span>
+              <div class="time-tag">⏱️ 1 h 45 min</div>
+            </td>
+            <td>
+              <div class="airport-name">Robertson Field / Langdon Airport (4R3)</div>
+              <div class="subtext">✈️ 20 – 25 km (~18 min)</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

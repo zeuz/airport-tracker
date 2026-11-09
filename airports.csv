@@ -1,0 +1,8 @@
+﻿nombre_aeropuerto,designacion_icao,tipo_complejo,ciudad_cercana,ciudad_grande,latitud,longitud,zona_horaria
+Sprague Municipal Airport,4W0,Atlas-E (Washington State),"Sprague, WA","Spokane, WA",47.304401,-117.961998,America/Los_Angeles
+Salina Regional Airport,KSLN,Atlas-F (Kansas),"Brookville, KS","Wichita, KS",38.791,-97.652199,America/Chicago
+Plattsburgh International Airport,KPBG,Atlas-F (Upstate New York),"Lewis, NY","Montreal, CA / Burlington, VT",44.650902,-73.468102,America/New_York
+Ryan Airfield,KRYN,Titan II (Sur de Arizona),"Sahuarita, AZ","Tucson, AZ",32.1422,-111.175003,America/Phoenix
+Winters Municipal Airport,K77F,Atlas-F (Oeste de Texas),"Winters, TX","Abilene, TX",31.947201,-99.985802,America/Chicago
+Roswell Air Center,KROW,Atlas-F (Nuevo México),"Dexter / Hagerman, NM","Albuquerque, NM / El Paso, TX",33.301601,-104.530998,America/Denver
+Robertson Field / Langdon Airport,KD55,Safeguard ABM (Dakota del Norte),"Nekoma / Langdon, ND","Grand Forks, ND",48.752998,-98.393303,America/Chicago

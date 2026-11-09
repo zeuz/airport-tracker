@@ -1,0 +1,50 @@
+[general]
+; Airports list (CSV: icao,iata,name,lat,lon,timezone)
+airports_file = airports.csv
+; Hourly counts log
+log_file = data/traffic-log.csv
+; Default time zone when an airport has none
+timezone = America/Mexico_City
+
+[opensky]
+base_url = https://opensky-network.org/api
+token_url = https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token
+; OAuth2 credentials (client credentials). Optional: without them the quota is lower
+; and the historical arrivals endpoint may reject requests.
+
+client_id =
+client_secret =
+timeout = 30
+; Seconds to wait between requests
+request_delay = 1.0
+max_retries = 3
+
+[check]
+; approach = inbound flights (aircraft descending near the airport, real time)
+; arrivals = actual historical arrivals (requires --from-date/--to-date, or uses the previous day)
+mode = approach
+approach_radius_km = 150
+max_altitude_m = 6000
+require_descending = true
+
+[graph]
+title = Arrival counts at airports near missile silo sites
+; Optional HTML file used as the report header, instead of the title.
+; The path is relative to this .ini. It can be a fragment or a full page
+; (from a full page, <body> and its <style> blocks are used). Example:
+; info-html = info.html
+info-html = info.html
+; Optional stylesheet embedded in the report, after the built-in styles.
+; Path relative to this .ini. Empty = no extra styles. If the file is missing, a warning
+; is shown and the report is generated without it. If :root defines --bg-color, --card-bg,
+; --text-main, --text-muted, --border-color, --accent or --row-alt, graphs and tables use those colors.
+css-html = styles.css
+bar_color = #94a3b8
+max_bar_color = #94a3b8
+width = 600
+height = 150
+; Right-hand graph: how many weeks to show (total per week, Monday to Sunday) and its width in px.
+weeks = 8
+week_width = 320
+; Middle graph: this week's daily totals (Sunday to Saturday) and its width in px.
+this_week_width = 210
